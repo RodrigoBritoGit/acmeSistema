@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+	crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8" />
+<title>Login</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body class="">
+
+	<nav id="navbar-example2"
+		class="navbar navbar-light bg-success px-3 mb-3">
+		<a class="navbar-brand text-white" href="/">ACME</a>
+		<ul class="nav nav-pills">
+			<li class="nav-item-bg-success p-2 text-white"><a
+				class="nav-link text-white" href="/templates/listar">Dashboard</a></li>
+			<li class="nav-item p-2"><a class="nav-link text-white"
+				href="/templates/listar">Clientes</a></li>
+			<li class="nav-item dropdown p-2"><a
+				class="nav-link dropdown-toggle text-white"
+				data-bs-toggle="dropdown" href="/" role="button"
+				aria-expanded="false">Login</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="/">Logout</a></li>
+					<li><hr class="dropdown-divider"></li>
+
+				</ul></li>
+		</ul>
+	</nav>
+
+	<div class="d-grid gap-1 mb-5 d-md-flex justify-content-md-center">
+		<h3 class="main-title center">Bem vindo ao sistema</h3>
+	</div>
+
+	<section class="vh-100">
+		<div class="container-fluid h-custom">
+			<div
+				class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-md-9 col-lg-6 col-xl-5">
+					<img
+						src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+						class="img-fluid" alt="Sample image">
+				</div>
+				<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+					<form>
+						<div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start p-3">
+							
+						</div>
+						<!-- Email input -->
+						<div class="form-outline mb-4">
+							<label class="form-label" for="form3Example3">Email</label>
+							<input type="email" id="form3Example3"
+								class="form-control form-control-lg"
+								placeholder="Digite seu email" />
+						</div>
+
+						<!-- Password input -->
+						<div class="form-outline mb-3">
+							<label class="form-label" for="form3Example4">Senha</label>
+							<input type="password" id="form3Example4"
+								class="form-control form-control-lg"
+								placeholder="Digite sua senha" /> 
+						</div>
+
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Checkbox -->
+							<div class="form-check mb-0">
+								<input class="form-check-input me-2" type="checkbox" value=""
+									id="form2Example3" /> <label class="form-check-label"
+									for="form2Example3"> Lembrar minha senha </label>
+							</div>
+							<a href="/" class="text-body">Esqueceu a senha?</a>
+						</div>
+
+						<div class="text-center text-lg-start mt-3 pt-2">
+							<a href="/templates/listar"><button type="button" class="btn btn-success btn-lg "
+								style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button></a>
+							<p class="small fw-bold mt-2 pt-1 mb-0">
+								Não possui uma conta? <a href="/" class="link-danger">Cadastre-se</a>
+							</p>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

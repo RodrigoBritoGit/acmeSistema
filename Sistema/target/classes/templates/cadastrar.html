@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+	crossorigin="anonymous"></script>
+
+<title>Cadastro de empresas</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/inicializar.js"></script>
+
+<script type="text/javascript" src="../js/googlemaps.js"></script>
+
+</head>
+
+<body class="grey lighten-3">
+
+	<nav id="navbar-example2"
+		class="navbar navbar-light bg-success px-3 mb-3">
+		<a class="navbar-brand text-white" href="/">ACME</a>
+		<ul class="nav nav-pills">
+			<li class="nav-item-bg-success p-2 text-white"><a
+				class="nav-link text-white" href="listar">Dashboard</a></li>
+			<li class="nav-item p-2"><a class="nav-link text-white"
+				href="listar">Clientes</a></li>
+			<li class="nav-item dropdown p-2"><a
+				class="nav-link dropdown-toggle text-white"
+				data-bs-toggle="dropdown" href="listar" role="button"
+				aria-expanded="false">Rodrigo Brito</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="/">Logout</a></li>
+					<li><hr class="dropdown-divider"></li>
+
+				</ul></li>
+		</ul>
+	</nav>
+
+	<div id="formularioEdicao" class="container">
+		<h3 class="main-title center mb-5">Cadastrar Empresa</h3>
+
+		<div class="row">
+
+			<form class="col s12" action="#" th:action="@{/empresa/salvar}"
+				th:object="${empresa}" method="post">
+				<div class="mb-4">
+					<h5>Dados da empresa</h5>
+				</div>
+
+				<div class="section">
+
+					<div class="row mb-3">
+						<div class="input-field col s12">
+							<label for="nomeEmpresa" class="form-label">Nome da
+								empresa</label> <input id="nomeEmpresa" type="text"
+								th:field="*{nomeEmpresa}" class="form-control" />
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="input-field col s12">
+							<label for="cnpj" class="form-label">CNPJ</label> <input
+								id="cnpj" type="text" class="input-field col s12 form-control"
+								th:field="*{cnpj}" />
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="input-field col s12">
+							<label for="status" class="form-label">Status</label> <input
+								id="status" type="text" th:field="*{status}"
+								class="form-control" />
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="input-field col s12">
+							<label for="local" class="form-label">Local</label> <input
+								id="local" type="text" class="input-field col s12 form-control"
+								th:field="*{local}" />
+						</div>
+					</div>
+
+				</div>
+				<!-- Fim SECTION Dados Basicos -->
+
+				<div class="row">
+					<div class="input-field col s12 center btn btn-success">
+						<button class="btn" type="submit" name="action">Salvar
+							Empresa</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- Fim do formulario de edicao -->
+
+	<script type="text/javascript"
+		src="../materialize/js/materialize.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIPw0BOFbsavl2S0XJm366GqIL8WaL4xw&amp;libraries=places&amp;callback=autoComplete"></script>
+
+</body>
+</html>
